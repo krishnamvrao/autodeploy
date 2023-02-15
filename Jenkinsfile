@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         maven 'maven3'
-        git 'Default'
+        jdk 'JDK11'
     }
    
     stages{
@@ -10,7 +10,7 @@ pipeline {
             steps{
                 sh 'git --version'
                 sh 'whereis git'
-                git 'https://github.com/jagarlamudirajesh34/automaticdeployment.git'
+                git 'https://gitlab.com/renukamusuluri1981/automaticdeployment.git'
             }
         }
         stage('maven clean'){
